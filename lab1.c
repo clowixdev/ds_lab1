@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
 	}
 	fseek(file_2, 0, SEEK_SET);
 
-	char** words_comparewith = (char**)malloc(words_count * WORDLEN * sizeof(char));
+	char** words_comparewith = (char**)malloc(words_count * WORDLEN * sizeof(char *));
 	for (int i = 0; i < words_count; i++) {
 		char* word = (char*)malloc(sizeof(char) * WORDLEN);
 		clear(word, WORDLEN-1);
@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
 		words_comparewith[i] = word;
 	}
 
-	char** words_toput = (char**)malloc(words_count * WORDLEN * sizeof(char));
+	char** words_toput = (char**)malloc(words_count * WORDLEN * sizeof(char *));
 	for (int i = 0; i < words_count; i++) {
 		char* word = (char*)malloc(sizeof(char) * WORDLEN);
 		clear(word, WORDLEN);
@@ -114,6 +114,8 @@ int main(int argc, char *argv[])
 	}
 	free(words_comparewith);
 	free(words_toput);
+
+	printf("everything is ok\n");	
 
 	return 0;
 }
