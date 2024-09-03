@@ -8,4 +8,4 @@ words from File3.txt and pasts the result into File4.txt
 
 All the pathes to the files are read by programm as command line arguments
 
-ACCEPTED!
+## ACCEPTED!
